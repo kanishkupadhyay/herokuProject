@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe</title>
+</head>
+<style>
+      .last-div{
+        background-color: saddlebrown;
+        display: flex;
+        justify-content: center;
+        margin-top: 300px;
+    }
+    .last-div h1 {
+        color: #fff;
+        font-size: 25px;
+    }
+    .first-div{
+        display: flex;
+        justify-content: center;
+        margin-top: 140px;
+    }
+    /*media queries*/
+      @media(max-width:432px){
+        .head{
+            font-size: 30px;
+        }
+        .last-div h1{
+            font-size: 20px;
+        }
+    }
+    @media (max-width:483px){
+        .first-div h1 {
+            font-size: 22px;
+        }
+    }
+</style>
+<body>
+    {{>kanishk}}
+    <div class="first-div">
+    <h1 >Thank you so much for subscribing</h1>
+    </div>
+    <div class="last-div">
+<h1>@2020 Created by kanishk upadhyay</h1>
+</div>
+</body>
+</html>

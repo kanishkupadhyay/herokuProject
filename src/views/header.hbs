@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kanishkupadhyay.com</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .first-div{
+        background-image: url("https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        height: 90vh;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .head{
+        position: absolute;
+        left: 35%;
+        top: 25%;
+        transform: translate(-50% -50%);
+        color: white;
+        font-size: 40px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .third-div{
+        display: flex;
+        justify-content: center;
+    }
+   .third-div span {
+        color: white;
+        width: 50%;
+        margin-top: 10%;
+        font-size: 17px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        word-spacing: 3px;
+    }
+    .btn-div{
+        display: flex;
+        justify-content: center;
+    }
+    .btn-div button{
+        text-decoration: none;
+        margin: 30px 30px;
+        background-color: saddlebrown;
+        color: #FFF;
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+.btn-div button:hover{
+    color: gray;
+}
+    .join-btn{
+
+    }
+    .last-div{
+        background-color: saddlebrown;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .last-div h1 {
+        color: #fff;
+        font-size: 25px;
+    }
+    @media(max-width:866px){
+        .third-div span{
+            margin-top: 140px;
+        }
+        .head{
+            left: 24%;
+        }
+    }
+    @media(max-width:622px){
+         .head{
+            left: 16%;
+        }
+        .third-div span {
+            width: 70%;
+        }
+    }
+    @media(max-width:539px){
+        .head{
+            left: 8%;
+        }
+    }
+    @media(max-width:490px){
+        .head{
+            font-size: 35px;
+        }
+    }
+    @media(max-width:432px){
+        .head{
+            font-size: 30px;
+        }
+        .last-div h1{
+            font-size: 20px;
+        }
+    }
+</style>
+<body>
+{{>kanishk}}
+<div class="first-div">
+    <div class="sec-div">
+<h1 class="head">Are You Music Lover?</h1>
+</div>
+<div class="third-div">
+<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quibusdam esse ab ex provident nulla cupiditate aspernatur exercitationem, quasi doloribus dolores cumque labore quo voluptatibus aliquid nisi debitis rem veniam deleniti neque perspiciatis, blanditiis deserunt! Voluptatem autem officia expedita, non, voluptate totam!</span>
+
+ </div>
+ <div class="btn-div">
+<button class="join-btn"><a href="/join">Join Now</a></button>
+<button class="subscribe-btn"><a href="/subscribe">Subscribe</a></button>
+</div>
+</div>
+<div class="last-div">
+<h1>@2020 Created by kanishk upadhyay</h1>
+</div>
+</body>
+</html>

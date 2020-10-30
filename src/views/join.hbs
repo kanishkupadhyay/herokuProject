@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join us</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+    .first-div{
+        display: flex;
+        justify-content: center;
+        background-color: saddlebrown;
+    }
+    .join {
+        font-size: 20px;
+        color: white;
+        
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .sec-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sec-div input{
+        margin-top: 20px;
+        padding: 10px 150px;
+        text-align: center;
+        border-radius: 5px;
+        outline: none;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .sec-div button{
+        background-color: saddlebrown;
+        margin-top: 20px;
+        padding:10px 100px ;
+        cursor: pointer;
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border-radius: 10px;
+    }
+    .btn :hover{
+        color: gray;
+    }
+    .sec-div button a{
+        color: white;
+        text-decoration: none;
+
+    }
+    .last-div{
+        background-color: saddlebrown;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        
+    }
+    .last-div h1 {
+        color: #fff;
+        font-size: 25px;
+    }
+    span{
+        color: red;
+    }
+    /*media queries*/
+    @media(max-width:474px){
+        .sec-div input{
+            padding: 10px 100px
+        }
+    }
+    @media(max-width:432px){
+        .head{
+            font-size: 30px;
+        }
+        .last-div h1{
+            font-size: 20px;
+        }
+    }
+
+</style>
+
+<body>
+    {{>kanishk}}
+    <br>
+    <div class="first-div">
+        <h3 class="join">Join us now!</h3>
+    </div>
+    <div class="sec-div">
+        <input type="text" name="" id="first-name" placeholder="First name">
+        <span id="firstspan"></span>
+        <input type="text" name="" id="second-name" placeholder="Second name">
+        <span id="secondSpan"></span>
+        <input type="text" name="" id="phone" placeholder="Phone number">
+        <span id="phoneSpan"></span>
+        <input id="gmail" type="email" placeholder="Gmail id">
+        <span id="gmailSPan"></span>
+        <button id="btn" class="btn"><a >Submit</a></button>
+    </div>
+    <div class="last-div">
+<h1>@2020 Created by kanishk upadhyay</h1>
+</div>
+<script>
+    let firstName=document.getElementById("first-name")
+    let secondName=document.getElementById("second-name")
+    let phone=document.getElementById("phone")
+    let gmail=document.getElementById("gmail")
+    let btn=document.getElementById("btn")
+    let firstspan=document.getElementById("firstspan")
+    let secondSpan=document.getElementById("secondSpan")
+    let phoneSpan=document.getElementById("phoneSpan")
+    let gmailSPan=document.getElementById("gmailSPan")
+    btn.addEventListener("click",function(){
+        if(firstName.value.length==0){
+            console.log("first name must be filled")
+            firstspan.innerHTML="first name must be filled"
+            firstspan.style.display="block"
+        }
+        else if(firstName.value.length<=3){
+            console.log("first name must be greater than 4")
+            firstspan.innerHTML="first name must be greater than 4"
+            firstspan.style.display="block"
+        }
+        else if(firstName.value.length>5){
+             firstspan.style.display="none"
+            console.log("congrats")
+        }
+       
+        btn.addEventListener("click",function(){
+            if(secondName.value.length==0){
+            secondSpan.innerHTML="Second name must be filled"
+            secondSpan.style.display="block"
+        }
+          if(secondName.value.length<=3){
+            secondSpan.innerHTML="Second name must be greater than 3"
+            secondSpan.style.display="block"
+        }
+        else if(secondName.value.length>=4){
+            secondSpan.style.display="none"
+        }
+        btn.addEventListener("click",function(){
+            if(phone.value.length==0){
+                phoneSpan.innerHTML="phone number must be filled"
+                phoneSpan.style.display="block"
+            }
+            if(phone.value.length==10){
+                phoneSpan.style.display="none"
+            }
+        
+        })
+        btn.addEventListener("click",function(){
+            if(gmail.value.length==0){
+                gmailSPan.innerHTML="gmail must be filled"
+                gmailSPan.style.display="block"
+            }
+            else if(gmail.value.length>1){
+                gmailSPan.style.display="none"
+            }
+        })
+        })
+        
+    })
+    
+</script>
+</body>
+</html>

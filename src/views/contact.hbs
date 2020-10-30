@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+     .last-div{
+        background-color: saddlebrown;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        
+    }
+    .last-div h1 {
+        color: #fff;
+        font-size: 25px;
+    }
+    .first-div{
+     display: flex;
+    margin-top: 46px;
+    justify-content: center;
+    background-color: saddlebrown;
+}
+        
+     .you{
+        
+        color: #fff;
+     }
+     .icon{
+         display: flex;
+         justify-content: center;
+     }
+     .icon-div{
+         margin: 100px 0px;
+     }
+     .fa-instagram:before{
+         margin: 0px 15px;
+         cursor: pointer;
+     }
+     .fa-twitter:before{
+         margin: 0px 15px;
+         cursor: pointer;
+     }
+     .fa-linkedin-square:before{
+         margin: 0px 15px;
+         cursor: pointer;
+     }
+     .fa-facebook-f:before, .fa-facebook:before {
+         margin: 0px 15px;
+         cursor: pointer;
+     }
+     .gmail-div{
+         display: flex;
+         justify-content: center;
+     }
+     .kanishk{
+         color:#5d1215;
+     }
+
+        /*meda queries*/
+  @media(max-width:432px){
+        .head{
+            font-size: 30px;
+        }
+        .last-div h1{
+            font-size: 20px;
+        }
+    }
+    @media(max-width:563px){
+        .gmail-div h2{
+            font-size: 20px;
+        }
+    }
+      @media(max-width:472px){
+        .gmail-div h2{
+            font-size: 15px;
+        }
+    }
+</style>
+<body>
+    {{>kanishk}}
+    <div class="first-div">
+        <h1 class="you">You can contact us on</h1>
+
+    </div>
+
+    <div class="icon">
+        <div class="icon-div">
+      <a target="_blank" href="https://www.instagram.com/kanishk__upadhyay/" > <i class="fa fa-instagram" style="font-size:48px;color:red"></i></a> 
+        <i class="fa fa-twitter" style="font-size:48px;color:red"></i>
+        <a target="_blank" href="https://in.linkedin.com/in/kanishk-upadhyay-6996141a4?trk=people-guest_people_search-card"><i class="fa fa-linkedin-square" style="font-size:48px;color:red"></i></a>
+        <a target="_blank" href="https://www.facebook.com/kanishk.upadhyay.18"><i class="fa fa-facebook-f" style="font-size:48px;color:red"></i></a>
+    </div>
+    </div>
+    <div class="gmail-div">
+        <h2 class="info">For more information:</h2>
+        <h2 class="kanishk">Kanishkupadhyay5@gmail.com</h2>
+    </div>
+    <div class="last-div">
+<h1>@2020 Created by kanishk upadhyay</h1>
+</div>
+</body>
+</html>
