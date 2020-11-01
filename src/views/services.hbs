@@ -1,35 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <style>
-     .last-div{
+    .last-div {
         background-color: saddlebrown;
         display: flex;
         justify-content: center;
         margin-top: 150px;
-        
+
     }
+
     .last-div h1 {
         color: #fff;
         font-size: 25px;
-    }  @media(max-width:432px){
-        .head{
+    }
+
+    @media(max-width:432px) {
+        .head {
             font-size: 30px;
         }
-        .last-div h1{
+
+        .last-div h1 {
             font-size: 20px;
         }
     }
+
+    .first-div {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+
+
+    }
+
+    .first-div h1 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+
+    }
+
+    .a {
+        background: linear-gradient(#236dca, #24a4ab);
+    }
+    .sec-div{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    #input{
+        padding: 10px 74px 8px 0px;
+        border-radius: 10px;
+         outline: none;
+         font-size: 15px;
+         font-family: Georgia, 'Times New Roman', Times, serif;
+         
+    }
+    #add-btn{
+        background-color: green;
+        color: #fff;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 15px;
+        cursor: pointer;
+        margin: 0px 0px 0px 28px;
+        padding: 0px 7px 0px 7px;
+        box-shadow: black 2px 3px 2px;
+        outline: none;
+        border-radius: 3px;
+        
+    }
+    #add-btn:hover{
+        color: gray;
+    }
+    .table-div{
+        display: flex;
+        justify-content: center;
+        margin-right: 311px;
+    }
+     .table-div ol li{
+         list-style: none;
+         font-size: 20px;
+         font-weight: bold;
+         letter-spacing: 1px;
+         
+     }
+     .remove-div{
+         display: flex;
+         justify-content: center;
+         
+     }
+     .remove-div button{
+         background-color: red;
+         cursor: pointer;
+         color: white;
+         padding: 7px 11px 11px 14px;
+         outline: none;
+         border-radius: 5px;
+         margin: 33px 0px -21px 278px;
+         box-shadow: black 2px 3px 2px;
+         display: none;
+     }
+     #remove:hover{
+         color: gray;
+     }
+     /*media queries*/
+     @media (max-width:343px){
+         .first-div h1{
+             font-size: 23px;
+         }
+         #input {
+             width: 150px;
+         }
+         .table-div{
+                 margin-right: 216px;
+         }
+         .remove-div button{
+             margin: 14px 0px -25px 178px;
+             padding: 4px 8px 8px 4px;;
+         }
+         .last-div h1 {
+    font-size: 18px;
+}
+     }
+      @media(max-width:321px){
+        .last-div h1{
+            font-size: 18px;
+        }
+      }
 </style>
+
 <body>
     {{>kanishk}}
-    <h1>Welcome to our services</h1>
-  <div class="last-div">
-<h1>@2020 Created by kanishk upadhyay</h1>
-</div>
+    <div class="first-div">
+        <div class="a">
+
+            <h1>Create your to do list</h1>
+        </div>
+    </div>
+    <div class="sec-div">
+        <input placeholder="Add a note" type="text" name="" id="input">
+        <button id="add-btn">Add to list</button>
+    </div>
+    <div class="remove-div">
+        <button id="remove">Remove</button>
+    </div>
+    <div class="table-div">
+        <ol>
+            <li id="first"></li>
+            <li id="sec"></li>
+            <li id="third"></li>
+            <li id="four"></li>
+            <li id="five"></li>
+            <li id="six"></li>
+            <li id="seven"></li>
+            <li id="eight"></li>
+            <li id="nine"></li>
+            <li id="ten"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <div class="last-div">
+        <h1>@2020 Created by kanishk upadhyay</h1>
+    </div>
+    <script>
+        console.log("hello world")
+        let input=document.getElementById("input")
+        let btn=document.getElementById("add-btn")
+        let first=document.getElementById("first")
+        let second=document.getElementById("sec")
+        let remove=document.getElementById("remove")
+        btn.addEventListener("click",kanishk=()=>{
+            console.log(input.value)
+            first.innerHTML=input.value
+            remove.style.display="block"
+            
+            if(input.value==""){
+                remove.style.display="none"
+                first.style.display="none"
+            }
+            else{
+                first.style.display="block"
+            }
+           
+        })
+        remove.addEventListener("click",upadhyay=()=>{
+            first.style.display="none"
+            remove.style.display="none"
+        })
+        
+        
+    </script>
 </body>
+
 </html>

@@ -39,6 +39,7 @@
     .first-header{
         background-color: saddlebrown;
         height: 15vh;
+        
     }
     a{
         text-decoration: none;
@@ -47,6 +48,24 @@
     }
     a:hover{
         color: gray;
+    }
+    .kanishk5{
+        animation-name: kanishk5;
+        animation-timing-function: infinite;
+        animation-fill-mode: forwards;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes kanishk5{
+        0%{
+            margin-left: 0px
+        }
+        30%{
+            margin-right: 20px;
+        }
+        60%{
+            margin-left: 40px;
+        }
     }
     /*media queries*/
 
@@ -66,11 +85,26 @@
              font-size: 12px;
          }
      }
+     @media (max-width:367px){
+         .first-ol li{
+             margin: -26px 20px 30px;
+         }
+     }
+     @media (max-width:320px){
+         .first-ol li{
+             margin: -26px 16px 30px;
+         }
+     }
+      @media (max-width:295px){
+         .first-ol li{
+             margin: -26px 13px 30px;
+         }
+     }
 </style>
 <body>
 <header class="first-header">
     <span class="first-head">
-        <span class="kanishk">KanishkUpadhyay</span>
+        <span class="kanishk5">KanishkUpadhyay</span>
         </span>
     <ol class="first-ol">
         <li> <a href="/">Home</a></li>

@@ -77,6 +77,11 @@
             font-size: 20px;
         }
     }
+     @media(max-width:321px){
+        .last-div h1{
+            font-size: 18px;
+        }
+     }
 
 </style>
 
@@ -112,13 +117,13 @@
     let gmailSPan=document.getElementById("gmailSPan")
     btn.addEventListener("click",function(){
         if(firstName.value.length==0){
-            console.log("first name must be filled")
-            firstspan.innerHTML="first name must be filled"
+            console.log("First name must be filled")
+            firstspan.innerHTML="First name must be filled"
             firstspan.style.display="block"
         }
         else if(firstName.value.length<=3){
-            console.log("first name must be greater than 4")
-            firstspan.innerHTML="first name must be greater than 4"
+            console.log("First name must be greater than 4")
+            firstspan.innerHTML="First name must be greater than 4"
             firstspan.style.display="block"
         }
         else if(firstName.value.length>5){
@@ -131,7 +136,7 @@
             secondSpan.innerHTML="Second name must be filled"
             secondSpan.style.display="block"
         }
-          if(secondName.value.length<=3){
+         else if(secondName.value.length<=3){
             secondSpan.innerHTML="Second name must be greater than 3"
             secondSpan.style.display="block"
         }
@@ -140,7 +145,7 @@
         }
         btn.addEventListener("click",function(){
             if(phone.value.length==0){
-                phoneSpan.innerHTML="phone number must be filled"
+                phoneSpan.innerHTML="Phone number must be filled"
                 phoneSpan.style.display="block"
             }
             if(phone.value.length==10){
@@ -150,7 +155,7 @@
         })
         btn.addEventListener("click",function(){
             if(gmail.value.length==0){
-                gmailSPan.innerHTML="gmail must be filled"
+                gmailSPan.innerHTML="Gmail must be filled"
                 gmailSPan.style.display="block"
             }
             else if(gmail.value.length>1){
